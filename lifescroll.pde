@@ -23,27 +23,33 @@ PImage bg;
 PImage bg2;
 //character sprites
 Animation plane;
-PImage smiley;
+Animation paddleDude;
 
+PImage smiley;
+PImage titlebanner;
 //item to drop
 
 //movement control booleans
 boolean wPressed, sPressed; //WASD
 
+//menu fade to black
+int tint = 255; 
 
+//image coordinates
 int charX = 400;
 int charY = 160;
 int bgX = 0;
 int bgX2 = 1200;
-
+int paddleDudeX = -200; 
+int paddlDudeSpeed = 4; 
 // LEVEL CONTROL
-int gamePhase = 1; 
+int gamePhase = 0; 
 
 void setup()
 {
   loadImages();
   size(1200,600);
-  frameRate(60);
+  frameRate(30);
 }
 
 void draw()

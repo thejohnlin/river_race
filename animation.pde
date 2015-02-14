@@ -14,9 +14,9 @@ class Animation {
     }
   }
 
-  void display(float xpos, float ypos){
+  void display(float xpos, float ypos, float scale){
     frame = (frame+1) % imageCount;
-    image(images[frame], xpos, ypos);
+    image(images[frame], xpos, ypos, images[frame].width/scale, images[frame].height/scale);
   }
   
   int getWidth() {
