@@ -1,2 +1,3 @@
-# river_race
-banner sidescroller for website
+# Paddle Paddle 
+Banner sidescroller for future website. 
+Intended to be converted into JavaScript. 
