@@ -30,20 +30,18 @@ PImage titlebanner;
 //item to drop
 
 //movement control booleans
-boolean wPressed, sPressed; //WASD
-
+boolean wPressed, aPressed, sPressed, dPressed, spacePressed; //WASD
 //menu fade to black
 int tint = 255; 
 
 //image coordinates
-int charX = 400;
-int charY = 160;
+int charX = 240;
+int charY = 200;
 int bgX = 0;
 int bgX2 = 1200;
-int paddleDudeX = -200; 
-int paddlDudeSpeed = 4; 
+
 // LEVEL CONTROL
-int gamePhase = 0; 
+int gamePhase = 1; 
 
 void setup()
 {
@@ -68,9 +66,17 @@ void keyPressed()
   {
     wPressed = true;
   }
-  if (key == 's' || key == 'S' || keyCode == DOWN)
+  if (key == 'a' || key == 'A' || keyCode == LEFT)
   {
-    sPressed = true;
+    aPressed = true;
+  }
+  if (key == 'd' || key == 'D' || keyCode == RIGHT)
+  {
+    dPressed = true;
+  } 
+  if (key == ' ')
+  {
+    spacePressed = true;
   }
 }
 
@@ -82,8 +88,16 @@ void keyReleased()
   {
     wPressed = false;
   }
-  if (key == 's' || key == 'S' || keyCode == DOWN)
+  if (key == 'a' || key == 'A' || keyCode == LEFT)
   {
-    sPressed = false;
+    aPressed = false;
+  }
+  if (key == 'd' || key == 'D' || keyCode == RIGHT)
+  {
+    dPressed = false;
+  }  
+  if (key == ' ')
+  {
+    spacePressed = false;
   }
 }
